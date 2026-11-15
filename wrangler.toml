@@ -1,0 +1,7 @@
+name = "teaspoon-menu-api"
+main = "src/index.js"
+compatibility_date = "2026-11-15"
+
+[[kv_namespaces]]
+binding = "MENU_KV"
+id = "BURAYA_KV_NAMESPACE_ID_YAZIN"

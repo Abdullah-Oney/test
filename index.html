@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#5A0D0E">
+  <title>Yönetim Paneli | Teaspoon Bakery</title>
+  <link rel="icon" type="image/png" href="../assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body class="admin-page">
+  <header class="admin-topbar">
+    <a class="admin-brand" href="../index.html"><img src="../assets/logo.png" alt="Teaspoon Bakery"><span>TEASPOON <small>MENU MANAGEMENT</small></span></a>
+    <a class="admin-view-site" href="../index.html" target="_blank" rel="noopener noreferrer">Müşteri sayfasını aç ↗</a>
+  </header>
+
+  <main class="admin-main">
+    <section class="admin-login-card" id="login-panel">
+      <div class="admin-login-emblem">✦</div>
+      <p class="eyebrow dark-eyebrow">PRIVATE ACCESS</p>
+      <h1>Yönetim paneli</h1>
+      <p class="admin-muted">Menü ve fiyat güncellemeleri</p>
+      <form id="login-form" class="login-form">
+        <label>Kullanıcı adı<input id="username" name="username" type="text" autocomplete="username" required placeholder="Kullanıcı adınız"></label>
+        <label>Şifre<input id="password" name="password" type="password" autocomplete="current-password" required placeholder="Şifreniz"></label>
+        <button class="primary-button" type="submit">Giriş yap <span>→</span></button>
+      </form>
+      <p class="form-message" id="login-message" role="status"></p>
+      <p class="login-footnote">Bu alan yalnızca yetkili işletme personeli içindir.</p>
+    </section>
+
+    <section class="admin-dashboard hidden" id="dashboard">
+      <div class="dashboard-heading">
+        <div><p class="eyebrow dark-eyebrow">TEASPOON BAKERY</p><h1>Menü yönetimi</h1><p class="admin-muted">Ürün adlarını ve fiyatlarını düzenleyin.</p></div>
+        <button class="logout-button" id="logout-button" type="button">Oturumu kapat</button>
+      </div>
+      <div class="admin-status" id="admin-status"><span class="status-dot"></span><span>Menü yükleniyor…</span></div>
+      <div id="editor-root" class="editor-root"></div>
+      <div class="save-bar">
+        <div><strong>Değişiklikler hazır mı?</strong><small>Kaydettiğinizde müşteri menüsü güncellenir.</small></div>
+        <button class="primary-button save-button" id="save-menu" type="button">Fiyatları kaydet <span>✓</span></button>
+      </div>
+      <p class="form-message save-message" id="save-message" role="status"></p>
+      <div class="admin-help"><strong>Bilgi</strong><p>GitHub Pages tek başına verileri tüm ziyaretçilere ortak şekilde kaydedemez. Ortak ve otomatik güncelleme için paketteki <code>cloudflare-worker</code> kurulumu tamamlanmalıdır. API ayarı yapılmadıysa değişiklikler yalnızca bu tarayıcıda saklanır.</p></div>
+    </section>
+  </main>
+  <footer class="admin-footer"><a href="../index.html">← Müşteri menüsüne dön</a><span>Teaspoon Bakery · Admin</span></footer>
+  <script type="module" src="../assets/admin.js"></script>
+</body>
+</html>
